@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TanStack Query Sandbox
 
-## Getting Started
+Educational project for learning and practicing TanStack Query (React Query), nuqs, shadcn/ui, and Next.js App Router.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+* **Next.js** (App Router, TypeScript)
+* **React 18+**
+* **@tanstack/react-query** — data-fetching and caching
+* **@tanstack/react-query-devtools** — Devtools for query debugging
+* **nuqs** — stateful URL query parameter management
+* **zod** — query param validation and transformation
+* **shadcn/ui** — modern UI component library
+* **Tailwind CSS** — utility-first CSS framework
+
+## 📂 Project Structure
+
+```
+/src
+├── app
+│   └── users
+│       ├── page.tsx          // server-side component (App Router)
+│       └── users-list.tsx    // client-side component using useQuery & nuqs
+├── components/ui            // shadcn UI components
+├── lib
+│   └── react-query-provider.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📄 Features Implemented
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* ⚛️ QueryClient initialized using `useState(() => new QueryClient())`
+* 🔄 Fetching user list from JSONPlaceholder API
+* 📊 Sorting users by name (asc/desc) using `useQueryState('sort')`
+* 📄 Pagination with `page` param and dynamic enabling/disabling of navigation buttons
+* ✅ Validation of query params using `zod`
+* 💡 SSR-compatible layout + isolated Client Components
+* 🔍 React Query Devtools enabled
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💡 Project Goal
 
-## Learn More
+To practice modern approaches for asynchronous data fetching, caching, and URL state management in real-world React (Next.js) applications.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn install
+yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project will continue to grow with more examples: filters, forms, optimistic UI, mutations, local storage persist, and advanced query use-cases.
