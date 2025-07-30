@@ -22,7 +22,8 @@ Educational project for learning and practicing TanStack Query (React Query), nu
 │       ├── page.tsx          // server-side component (App Router)
 │       └── users-list.tsx    // client-side component using useQuery & nuqs
 ├── components/ui            // shadcn UI components
-├── lib
+├── hooks
+├── provider
 │   └── react-query-provider.tsx
 ```
 
